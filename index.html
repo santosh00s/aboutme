@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>I'm Santosh Dudhal</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link href="css/jquery.fsscroll.css" rel="stylesheet">
+    <link href="css/mystyle.css" rel="stylesheet">
+    <script data-ad-client="ca-pub-8233921403164114" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<style>
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 99999;
+    display: flex
+}
+
+#preloader:before,#preloader:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*width: 50%;*/
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+    -webkit-transition: all .3s ease 0s;
+    -o-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+}
+#preloader:before{
+    width: 58.3333333333%;
+    /*background: #dc1a5c;
+    background: -moz-linear-gradient(left,  #dc1a5c 0%, #ea3a50 50%, #f37042 100%);
+    background: -webkit-linear-gradient(left,  #dc1a5c 0%,#ea3a50 50%,#f37042 100%);
+    background: linear-gradient(to right,  #dc1a5c 0%,#ea3a50 50%,#f37042 100%);*/
+}
+#preloader:after {
+    width: 41.6666666667%;
+    left: auto;
+    right: 0;
+    /*background: #dc1a5c;
+    background: -moz-linear-gradient(right,  #dc1a5c 0%, #ea3a50 50%, #f37042 100%);
+    background: -webkit-linear-gradient(right,  #dc1a5c 0%,#ea3a50 50%,#f37042 100%);
+    background: linear-gradient(to left,  #dc1a5c 0%,#ea3a50 50%,#f37042 100%);*/
+}
+
+#preloader .loader_line {
+    margin: auto auto auto 58.3333333333%;
+    width: 1px;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all .8s ease 0s;
+    -o-transition: all .8s ease 0s;
+    transition: all .8s ease 0s
+}
+
+.loader_line:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1px;
+    height: 0%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: #fff;
+    -webkit-animation: lineheight 1000ms ease-in-out 0s forwards;
+    -o-animation: lineheight 1000ms ease-in-out 0s forwards;
+    animation: lineheight 1000ms ease-in-out 0s forwards
+}
+
+.loader_line:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #999;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-animation: lineround 1200ms linear 0s infinite;
+    -o-animation: lineround 1200ms linear 0s infinite;
+    animation: lineround 1200ms linear 0s infinite;
+    animation-delay: 2000ms
+}
+.spinner-border{
+    position: absolute;
+    right: 0;
+    max-width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 15rem;
+    height: 15rem;
+    border-width: 0.15em;
+}
+@keyframes lineheight {
+    0% {
+        height: 0%
+    }
+
+    100% {
+        height: 100%
+    }
+}
+
+@keyframes lineround {
+    0% {
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%)
+    }
+
+    100% {
+        -webkit-transform: translateY(200%);
+        -ms-transform: translateY(200%);
+        -o-transform: translateY(200%);
+        transform: translateY(200%)
+    }
+}
+
+.preloaded .loader_line:after {
+    opacity: 0
+}
+
+.preloaded .loader_line {
+    opacity: 0;
+    height: 100%!important
+}
+
+.preloaded:before,.preloaded:after {
+    -webkit-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+    -o-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+    animation: preloadedzero 300ms ease-in-out 500ms forwards
+}
+.preloaded .spinner-border{
+    opacity: 0
+}
+
+@keyframes preloadedzero {
+    0% {width: 50%}
+    100% {width: 0%}
+}  
+
+@media screen and (max-width: 991px){
+  #preloader:after, #preloader:before{
+    width: 50%;
+  }
+  #preloader .loader_line{
+    margin: auto 15% auto auto;
+  }
+  .spinner-border{
+    right: 15%;
+  }
+}
+</style>
+</head>
+<body>
+<div id="preloader">
+  <div class="spinner-border text-light"></div>
+  <div class="loader_line"></div>
+</div>
+
+<div class="mouse-cursor cursor-outer"></div>
+<div class="mouse-cursor cursor-inner"></div>
+
+<main class="main-wrapper">
+<header class="header fixed-top">
+  <nav class="navbar navbar-expand-md navbar-light p-0">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-text">MENU</span>
+    </button>      
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-head">
+          
+          <div class="main-wrap">
+            <div class="main-logo">
+              <img src="img/ar.png" class="img-fluid" alt="">
+            </div>
+            <div class="main-title text-md-right">
+              <p class="hello-bubble">
+                Hello
+              </p>
+              <a href="#" class="name">
+                <span class="im">I'm</span>
+                <span class="name-text">Santosh Dudhal</span>
+                <span class="overlay_effect"></span>
+              </a>
+              <div class="location">
+                Mumbai, India
+                <span class="overlay_effect"></span>
+              </div>
+              <div class="designation">
+                DevSecOps/Site Reliability Engineer
+                <span class="overlay_effect"></span>
+              </div>
+            </div> 
+          </div>
+       
+        <div class="nav-menu">
+          <ul class="nav main-nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active " id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+              Home<span class="overlay_effect"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="about-tab" data-bs-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="false">
+              About<span class="overlay_effect"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact<span class="overlay_effect"></span></a>
+            </li>
+          </ul>
+          <ul class="nav social-nav">
+            <li class="nav-item">
+              <a href="https://linkedin.com/in/santosh-dudhal-253579166" target="_blank" class="nav-link"><img class="img-fluid" src="https://img.icons8.com/color/24/000000/linkedin.png"/></a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.facebook.com/santosh.dudhal?mibextid=LQQJ4d" target="_blank" class="nav-link"><img class="img-fluid" src="https://img.icons8.com/color/24/000000/facebook.png"/></a>
+            </li>
+            <li class="nav-item">
+              <a href="https://twitter.com/santoshdudhal0" target="_blank" class="nav-link"><img class="img-fluid" src="https://img.icons8.com/color/24/000000/twitter.png"/></a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.instagram.com/san_tosh7/" target="_blank" class="nav-link"><img class="img-fluid" src="https://img.icons8.com/color/24/000000/instagram.png"/></a>
+            </li>
+          </ul>
+        </div>            
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<section class="content-area scroll">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 px-0">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active h-100vh" id="home" role="tabpanel" aria-labelledby="home-tab">
+            
+
+          <div class="swiper-container introcontainer">
+            <div class="swiper-wrapper introwrap">
+              <div class="swiper-slide introitem section0">
+                <div class="row carousel-content-wrap right-mock mobile-view">
+                  <div class="caption-wrap">
+                    <a class="project-name">Enthusiastic</a>
+                    <p class="project-desc">My enthusiasm for Cloud Computing allows me to stay motivated at work and find importance in what I'm doing.</p>
+
+                  </div>
+                  <div class="mockup-wrap">
+                    <img src="img/first.JPG" loading="lazy" class="img-fluid" alt="">
+
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide introitem section1">
+                <div class="row carousel-content-wrap left-mock mobile-view">
+                  <div class="caption-wrap">
+                    <a class="project-name">Confident</a>
+                    <p class="project-desc">My confidence helps me recognize my abilities while also knowing that there's always room to learn more.</p>
+                  </div>
+                  <div class="mockup-wrap">
+                    <img src="img/fourth.JPG" loading="lazy" class="img-fluid" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide introitem section2">
+                <div class="row carousel-content-wrap right-mock mobile-view">
+                  <div class="caption-wrap">
+                    <a class="project-name">Inquisitive</a>
+                    <p class="project-desc"> I like to explore the world around me and find meaningful ways to contribute to conversations.</p>
+                    
+                  </div>
+                  <div class="mockup-wrap">
+                    <img src="img/second.JPG" loading="lazy" class="img-fluid" alt="">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+             <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+
+
+          </div>
+          <div class="tab-pane fade pb-5" id="about" role="tabpanel" aria-labelledby="about-tab">
+              <div class="data-wrapper row text-center position-relative">
+                <div id="myCanvasContainer">
+                  <canvas width="500" height="500" id="myCanvas">
+                    <ul id="tags" style="display: none;">
+                      <li><a href="">DevOps</a></li>
+                      <li><a href="">AWS</a></li>
+                      <li><a href="">Terraform</a></li>
+                      <li><a href="">Kubernetes</a></li>
+                      <li><a href="">Ansible</a></li>
+                      <li><a href="">Chef</a></li>
+                      <li><a href="">Puppet</a></li>
+                      <li><a href="">Istio</a></li>
+                      <li><a href="">Serverless</a></li>
+                      <li><a href="">GCP</a></li>
+                      <li><a href="">RedHat</a></li>
+                      <li><a href="">CI/CD</a></li>
+                      <li><a href="">Automation</a></li>
+                      <li><a href="">Monitoring</a></li>
+                      <li><a href="">DevSecOps</a></li>
+                      <li><a href="">Jenkins</a></li>
+                      <li><a href="">IoT</a></li>
+                      <li><a href="">HTML,CSS3</a></li>
+                      <li><a href="">Python</a></li>
+                      <li><a href="">Azure</a></li>
+                      <li><a href="">GitHub Actions</a></li>
+                      <li><a href="">Docker</a></li>
+                      <li><a href="">CKA</a></li>
+                      <li><a href="">OWASP</a></li>
+                      <li><a href="">Git</a></li>
+                      <li><a href="">Databases</a></li>
+                    </ul>
+                  </canvas>
+                </div>
+              </div>
+
+              <div class="data-wrapper row">
+                <div class="left-data-box col-12 col-lg-6">
+                  <div class="data-header-wrapper sticky">
+                    <h5 class="data-header number">01</h5>
+                    <h5 class="data-header title">Profile</h5>
+                    <div class="data-line"></div>
+                  </div>
+                </div>
+                <div class="right-data-box col-12 col-lg-6">
+                  <p>Hello! I’m Santosh Dudhal. Self-motivated professional with extensive IT experience in managing IT operations, leading transformation initiatives, DevOps, infrastructure automation, Cybersecurity and Linux engineering.
+Well conversant with the latest technology trends, avid learner, team player and extensive work experience in IT operations.
+ </p>
+                </div>
+              </div>
+
+              <div class="data-wrapper row">
+                <div class="left-data-box col-12 col-lg-6">
+                  <div class="data-header-wrapper sticky">
+                    <h5 class="data-header number">02</h5>
+                    <h5 class="data-header title">Background</h5>
+                    <div class="data-line"></div>
+                  </div>
+                </div>
+                <div class="right-data-box col-12 col-lg-6">
+                  <div class="timeline-wrapper">
+                    <ul class="timeline-list">
+                      <li class="timeline-item">
+                        <div class="timestamp">
+                          Jun 2022 - Now
+                        </div>
+                        <div class="item-title">Empezar Digital</div>
+                        <div class="item-detail">AVP DevSecOps & Cloud - Techonlogy</div>
+                      </li>
+                      
+                      <li class="timeline-item">
+                        <div class="timestamp">
+                          Jan 2020- Jun 2022
+                        </div>
+                        <div class="item-title">Clover Infotech</div>
+                        <div class="item-detail">DevOps Manager</div>
+                      </li>
+                      <li class="timeline-item">
+                        <div class="timestamp">
+                          Jun 2019 - Jan 2020
+                        </div>
+                        <div class="item-title">Searce Inc</div>
+                        <div class="item-detail">Cloud Engineer</div>
+                      </li>
+                      <li class="timeline-item">
+                        <div class="timestamp">
+                          Apr 2019- Jun 2019
+                        </div>
+                        <div class="item-title">NeoAnalytics Infoedge</div>
+                        <div class="item-detail">Linux Engineer</div>
+                      </li>
+                      <li class="timeline-item">
+                        <div class="timestamp">
+                          Sep 2018 - Apr 2019
+                        </div>
+                        <div class="item-title">Gossamer Media</div>
+                        <div class="item-detail">Linux Administrator</div>
+                      </li>
+
+                    </ul>
+                  </div>     
+
+                </div>
+              </div>
+
+              <div class="data-wrapper row">
+                <div class="left-data-box col-12 col-lg-6">
+                  <div class="data-header-wrapper sticky">
+                    <h5 class="data-header number">03</h5>
+                    <h5 class="data-header title">Skills</h5>
+                    <div class="data-line"></div>
+                  </div>
+                </div>
+                <div class="right-data-box col-12 col-lg-6">
+                  <div class="skills-wrapper">
+                    <h6 class="skills-heading">Tools & Technologies Used</h6>
+                  <ul class="skills-list">
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Kubernetes">
+                        <img src="img/icon2/kubernetes.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Terraform">
+                        <img src="img/icon2/terraform.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Istio">
+                        <img src="img/icon2/istio.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Jenkins">
+                        <img src="img/icon2/jenkins.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Git">
+                        <img src="img/icon2/git.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Ansible">
+                        <img src="img/icon2/ansible.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Chef">
+                        <img src="img/icon2/chef.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Puppet">
+                        <img src="img/icon2/puppet.webp" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Python">
+                        <img src="img/icon2/python.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="JMeter">
+                        <img src="img/icon2/jmeter.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="AWS EKS">
+                        <img src="img/icon2/eks.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="AWS ECS">
+                        <img src="img/icon2/ecs.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Docker">
+                        <img src="img/icon2/docker.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="GitHub Actions">
+                        <img src="img/icon2/github_actions.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="NewRelic">
+                        <img src="img/icon2/newrelic.svg" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Prometheus">
+                        <img src="img/icon2/prom.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Grafana">
+                        <img src="img/icon2/grafana.jpeg" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="GKE">
+                        <img src="img/icon2/gke.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="ELK Stack">
+                        <img src="img/icon2/elk.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Zabbix">
+                        <img src="img/icon2/zabbix.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Jaeger">
+                        <img src="img/icon2/jaeger.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Kiali">
+                        <img src="img/icon2/kiali.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Hyper-V">
+                        <img src="img/icon2/hyperv2.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="VMware">
+                        <img src="img/icon2/vmware.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="GhostInspector">
+                        <img src="img/icon2/ghost.jpeg" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Qualitia">
+                        <img src="img/icon2/qualitia.jpeg" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Jira">
+                        <img src="img/icon2/jira-1.svg" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="BugZilla">
+                        <img src="img/icon2/bugzilla.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Talisman">
+                        <img src="img/icon2/talisman.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="OWASP">
+                        <img src="img/icon2/owasp.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="OpenVAS">
+                        <img src="img/icon2/openvas.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="RDS">
+                        <img src="img/icon2/rds.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="AWS IoT">
+                        <img src="img/icon2/iot.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="RedHat">
+                        <img src="img/icon2/redhat.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Ubuntu">
+                        <img src="img/icon2/ubuntu.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="CentOS">
+                        <img src="img/icon2/centos.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Kali">
+                        <img src="img/icon2/kali.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Windows">
+                        <img src="img/icon2/windows.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Apache">
+                        <img src="img/icon2/apache.jpeg" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Nginx">
+                        <img src="img/icon2/nginx.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="IIS">
+                        <img src="img/icon2/iis.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Tomcat">
+                        <img src="img/icon2/tomcat.webp" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="HTML5">
+                        <img src="img/icon2/html.webp" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="CSS3">
+                        <img src="img/icon2/css3.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="YAML">
+                        <img src="img/icon2/yaml.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Gradel">
+                        <img src="img/icon2/gradel.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Apache Maven">
+                        <img src="img/icon2/maven.webp" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Gitlab">
+                        <img src="img/icon2/gitlab.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Vagrant">
+                        <img src="img/icon2/vagrant.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Bash">
+                        <img src="img/icon2/bash.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Powershell">
+                        <img src="img/icon2/powershell.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Nagios">
+                        <img src="img/icon2/nagios.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Slack">
+                        <img src="img/icon2/slack.jpeg" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="PagerDuty">
+                        <img src="img/icon2/pager.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Dynatrace">
+                        <img src="img/icon2/dyna.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="WireShark">
+                        <img src="img/icon2/wireshark.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                  </ul>
+                  </div>
+
+                  <div class="skills-wrapper">
+                    <h6 class="skills-heading">Worked on Cloud platforms</h6>
+                  <ul class="skills-list">
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="AWS">
+                        <img src="img/icon2/aws.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="GCP">
+                        <img src="img/icon2/GCP2.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Azure">
+                        <img src="img/icon2/azure.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="DigitalOcean">
+                        <img src="img/icon2/download.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                  </ul>
+                  </div>
+
+                  <div class="skills-wrapper">
+                    <h6 class="skills-heading">Global Certifications</h6>
+                  <ul class="skills-list">
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="AWS Certified DevOps Engineer - Professional">
+                        <img src="img/icon2/awsdevops.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="AWS Certified Solution Architect - Associate">
+                        <img src="img/icon2/saa.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Certified Kubernetes Administrator">
+                        <img src="img/icon2/cks.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Google Cloud Engineer - Associate">
+                        <img src="img/icon2/gcpasso.png" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon-wrap" data-bs-toggle="tooltip" data-bs-placement="top" title="RedHat Certified Engineer">
+                        <img src="img/icon2/redhatengineer.jpeg" class="img-fluid" alt="">
+                      </div>
+                    </li>
+                  </ul>
+                  </div>
+
+                  
+
+                </div>
+              </div>
+          </div>
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="data-wrapper row justify-content-center">
+              <div class="col-12 col-md-8">
+                <img src="img/contact-me.svg" lazy="loaded" class="img-fluid" alt="">
+              </div>
+            </div>
+            <div class="data-wrapper row email-wrap">
+              <div class="col-12">
+                <div class="email-head">
+                  <i class="email-icon"></i>
+                  <div class="email-headinner">
+                    <h5 class="display-5 email-text"> Email</h5>
+                    <a href="mailto:santoshdudhal0@gmail.com" class="email text-center">
+                      <h4 class="email-address">
+                      santoshdudhal0@gmail.com
+                      <span class="overlay_effect"></span>
+                      </h4>
+                    </a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="data-wrapper row mobile-wrap">
+              <div class="col-12">
+                <div class="mobile-head">
+                  <i class="mobile-icon"></i>
+                  <div class="mobile-headinner">
+                    <h5 class="display-5 mobile-text"> Mobile</h5>
+                    <a href="tel:8097979373" class="mobile text-center">
+                      <h4 class="mobile-address">
+                      +91 8097979373
+                      <span class="overlay_effect"></span>
+                      </h4>
+                    </a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.fsscroll.min.js"></script>
+<script src="js/jquery.tagcanvas.min.js"></script>
+<script src="js/script.js"></script>
+</script>
+<script src="js/swiper-bundle.min.js"></script>
+</body>
+</html>
